@@ -1,5 +1,7 @@
 # Little Calendar
 
+[![CI](https://github.com/advent06564/little-calendar/actions/workflows/ci.yml/badge.svg)](https://github.com/advent06564/little-calendar/actions/workflows/ci.yml)
+
 A simple desktop calendar app built with HTML, CSS, JavaScript, and ElectronJS. This project is a part of my YouTube tutorial series on building your first Electron application. 
 
 ## Tutorial video

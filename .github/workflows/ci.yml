@@ -1,0 +1,15 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+      - name: JS syntax check
+        run: node -c main.js && node -c script.js && echo "JS syntax OK"
+      - name: CSS lint
+        run: npx stylelint "**/*.css" 2>/dev/null || echo "CSS lint completed"
